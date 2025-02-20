@@ -45,18 +45,19 @@ export default function ProductsList({products, initialCartProducts}) {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {products.map(product => (
-                <Link key={product.id} href={"/products/" + product.id} className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+                <Link key={product.id} href={"/products/" + product.id} className="bg-white rounded-lg shadow-md p-4 border hover:shadow-lg transition duration-300">
                     <div className="flex justify-center mb-4 h-48 relative">
                         <Image
                             src={'/' + product.imageUrl}
                             alt="Product image"
+                            width={312}
+                            height={192}
                             quality={100}
-                            fill
                             className="object-cover rounded-md" // Cover the container, maintaining aspect ratio
                         />
                     </div>
                     <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-                    <p className="text-gray-600">${product.price}</p>
+                    <p className="text-black mb-3 text-2xl">${product.price}</p>
                     {
                         productIsInCart(product.id) ?
                             <button onClick={(e) => {
