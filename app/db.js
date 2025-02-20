@@ -10,8 +10,8 @@ export async function connectToDb() {
 
   try {
     const conn = await mongoose.connect(
-      process.env.MONGODB_URI
-    );
+      'mongodb+srv://' + process.env.MONGO_USERNAME + ':' + process.env.MONGO_PASSWORD+ '@cluster0.rr3aw.mongodb.net/testDB?retryWrites=true&w=majority&appName=Cluster0'
+    ); 
     isConnected = true; // Set the connection status to true
     console.log(`MongoDB connected: ${conn.connection.host}`);
     return conn.connection.db; // Return the db object after a successful connection
