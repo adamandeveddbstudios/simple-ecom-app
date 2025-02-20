@@ -16,7 +16,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # OS specific files
-.DS_Store
+.DS_Storegit
 Thumbs.db
 
 # IDE or editor settings
