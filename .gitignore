@@ -18,6 +18,7 @@ yarn-error.log*
 # OS specific files
 .DS_Storegit
 Thumbs.db
+.DS_Store
 
 # IDE or editor settings
 .vscode/
